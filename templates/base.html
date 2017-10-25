@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{tab_title}}</title>
+        <style>
+            .title {
+                text-align: center;
+            }
+            .error {
+                color: red;
+            }
+        </style>
+    </head>
+<body>
+
+    <nav>
+        <a href='/blog'>Main Blog Page</a>
+        &nbsp;&nbsp;
+        <a href='/newpost'>Add an Entry</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

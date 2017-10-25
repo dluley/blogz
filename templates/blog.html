@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class=title>
+    <h1>Build a Blog</h1>
+</div>
+
+    <form method='post'>
+
+    
+        {% for blog in blogs %}
+            {% if view == 'single' %}
+            <div>
+                <h2>{{blog.title}}</h2>
+                <p>{{blog.body}}</p>
+            </div>
+
+            {% else %}
+            <div>
+                <a href="/blog?id={{blog.id}}"><h2>{{blog.title}}</h2></a>
+                <p>{{blog.body}}</p>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </form>
+    <hr>
+
+{% endblock %}
