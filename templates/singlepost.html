@@ -2,15 +2,11 @@
 
 {% block content %}
         
-
-
-        {% for blog in blogs %}
-
-        <h1>{{ new_post.title }}</h1>
-        <h2>{{ new_post.body }}</h2>
-
-        {% endfor %}
-
+        <br>
+        <br>
+        <h1>{{blog.title}}</h1>
+        <h2>{{blog.body}}</h2>
+        <p>written by <a href = "/singleuser?username={{blog.owner.username}}">{{blog.owner.username}}</a></p>
 
 
 
